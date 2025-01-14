@@ -1,20 +1,11 @@
 @extends('components/head')
-@php  
-    include_once(app_path().'/includes/backend.php');
-    include(app_path().'/includes/devicedetection.php');
-@endphp
-<link  href="{{asset('public/css/a74f6e1f5cb94126.css')}}" rel="stylesheet"> 
+<link  href="{{asset('/css/a74f6e1f5cb94126.css')}}" rel="stylesheet"> 
 <link rel="icon" type="image/x-icon" href="{{url('img/bada-business-favicon.png')}}"> 
-<link href="{{asset('public/css/bootstrap.css')}}" rel="stylesheet">
+<link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
 <meta name="csrf-token" content="{{ csrf_token() }}" />
-<?php
-session_start();
-error_reporting(0);
-$url="https://www.badabusiness-trainings.com/bbmylogin/modules/Webforms/capture.php";
-$enu = base64_encode($url);
-?>
+
         <section>
-        <img src="{{url('public/img/Bada_business_website_Banner_images_LTM.webp')}}" class="bb" >
+        <img src="{{url('/img/Bada_business_website_Banner_images_LTM.webp')}}" class="bb" >
             <div class="container ">
             </div>
         </section>
@@ -22,52 +13,6 @@ $enu = base64_encode($url);
             <div class="single-listings-box p-3">
                 <h4 class="text-center text-uppercase pb-3 line">Register Now</h4>
                    <form class="formsales" id="_idmyform1" name=" Badabusiness Leads" action="" accept-charset="utf-8" enctype="multipart/form-data">
-                        <input type="hidden" name="__vtrftk" value="sid:f12bb82686cb3636c8609250f819c80adae338ca,1677318409">
-                        <input type="hidden" name="publicid" value="76a79ea12be03378c8ba3c7a92b4389f">                        
-                        <input type="hidden" name="urlencodeenable" value="1">               
-                        <input type="hidden" name="name" value="Bada Business Homepage">     
-                        <input type="hidden" name="cf_881" value="Warm Lead"> 
-                        <input type="hidden" name="cf_971" data-label="" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"> 
-                        <input name="leadsource" data-label="" value="website" type="hidden">
-                        <input name="cf_885" data-label="" value="-" type="hidden"> 
-                        <input name="cf_909" data-label="" value="<?php echo $date; ?>" type="hidden">
-                        <input name="cf_887" data-label="" value="-" type="hidden">
-                        <input name="cf_979" data-label="" value="-" type="hidden">
-                        <!--User Details-->
-                        <input name="cf_897" data-label="" value="19.0748" type="hidden"> 
-                        <input name="cf_899" data-label="" value="72.8856" type="hidden"> 
-                        <input name="cf_873" data-label="" value="Maharashtra" type="hidden"> <!-- can assign state-->
-                        <input name="cf_875" data-label="" value="Mumbai" type="hidden">
-                        <input name="cf_893" data-label="" value="India" type="hidden">                       
-                        <input name="cf_891" data-label="" value="Asia/Kolkata" type="hidden">
-                        <input name="cf_895" data-label="" value="103.210.198.13" type="hidden">
-                        <input name="cf_993" data-label="" value="-" type="hidden"><!--dreams-->
-                        <input name="cf_965" data-label="" value="" type="hidden">
-                        <input name="cf_1029" data-label="" value="104" type="hidden"><!--product ID-->
-                        <input name="cf_963" data-label="" value="<?php echo $os; ?>" type="hidden">
-                        <!-- End User Details -->
-                        <!-- -**********************--> 
-                        <input name="cf_921" data-label="" value="Admin" type="hidden"><!--Team Leader-->        
-                        <input type="hidden" name="cf_935" data-label="" value="<?php echo $dev; ?>">    
-                        <input type="hidden" name="cf_937" data-label="" value="<?php echo $matchtype; ?>"> 
-                        <input type="hidden" name="cf_1005" data-label="" value="<?php echo $keyw; ?>"><!--keyword-->
-                        <input type="hidden" name="cf_939" data-label="" value="<?php echo $tar; ?>">  
-                        <input type="hidden" name="cf_971" data-label="" value="<?php echo $place; ?>"> 
-                        <input type="hidden" name="cf_949" data-label="" value="<?php echo $create; ?>"> 
-                        <input type="hidden" name="cf_945" data-label="" value="<?php echo $physical; ?>"> 
-                        <input type="hidden" name="cf_929" data-label="" value="<?php echo $uri; ?>"> <!--Referrer url-->
-                        <input type="hidden" name="cf_967" data-label="" value="<?php echo $CampaignSource; ?>"> <!-- Ad source-->
-                        <input type="hidden" name="cf_997" data-label="" value="LTM"> <!-- Product Name-->
-                        <input type="hidden" name="cf_903" data-label="" value="https://www.badabusiness-trainings.com/ltm"><!--url-->
-                        <input type="hidden" name="cf_905"  data-label="" value="<?php echo $src; ?>"><!-- Backend source-->
-                        <input type="hidden" name="cf_961"  data-label="" value="<?php echo $netw; ?>">              
-                        <input name="enu" id="enu" data-label="" value="aHR0cHM6Ly93d3cuYmFkYWJ1c2luZXNzLXRyYWluaW5ncy5jb20vYmJteWxvZ2luL21vZHVsZXMvV2ViZm9ybXMvY2FwdHVyZS5waHA=" type="hidden">
-                        <input name="cf_925" data-label="" value="<?php echo $campaignid; ?>" type="hidden"> <!--Campaign ID-->
-                        <input name="cf_1009" data-label="" value="" type="hidden">   <!--$SubProduct-->
-                        <input name="cf_1007" data-label="" value="<?php echo $campaigntype; ?>" type="hidden">   <!--Campaign Name-->
-                     	<input name="cf_977" data-label="" value="<?php echo $CampaignContent; ?>" type="hidden">   <!--Source-->		
-	
-                      
                             <div class="row">
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group"><input type="text"  pattern="[a-zA-Z ]+" name="lastname" class="form-control contact_input_ht" id="name" required="" placeholder="Your name"></div>
@@ -170,7 +115,7 @@ $enu = base64_encode($url);
                    <div class="formcall position-relative">
                      <div class="form-banner-img "></div>
                        <a href="tel:+919167729245" class="bdr_clr">
-                        <span><img src="{{url('public/img/call_icon.webp')}}" alt="call"> 9167729245 </span>
+                        <span><img src="{{url('/img/call_icon.webp')}}" alt="call"> 9167729245 </span>
                        </a>
                     </div>
                </div>
@@ -187,7 +132,7 @@ $enu = base64_encode($url);
                             <div class="col-lg-1"></div>
                             <div class="col-lg-5 col-md-12">
                               <div class="images">
-                             <img src="{{url('public/img/ltm2.webp')}}" class="main-image  d-sm-block" alt="image">
+                             <img src="{{url('/img/ltm2.webp')}}" class="main-image  d-sm-block" alt="image">
                             </div>
                             </div>
                             <div class="col-lg-5 col-md-12">
@@ -222,7 +167,7 @@ $enu = base64_encode($url);
                     </div>
                 </div>
                        <div class="col-lg-5 col-md-12">
-                            <img src="{{url('public/img/chirag_img.webp')}}" class="main-image" alt="image">
+                            <img src="{{url('/img/chirag_img.webp')}}" class="main-image" alt="image">
                        </div>
                    </div>
                </div>

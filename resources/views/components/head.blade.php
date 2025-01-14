@@ -13,11 +13,11 @@
       <title>Badabusiness</title>
       <link rel="icon" type="image/x-icon" href="{{url('img/favicon.webp')}}"> 
       
-    <link  href="{{asset('/public/css/a74f6e1f5cb94126.css')}}" rel="stylesheet">  
+    <link  href="{{asset('/css/a74f6e1f5cb94126.css')}}" rel="stylesheet">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" >
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="{{asset('/public/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
      
 
@@ -120,7 +120,7 @@
                         <div class="hamburger-menu" id="ham-icon"><i class="fa fa-bars" style="font-size: 35px;padding: 15px;"></i></div>
                         <div class="logo">  
                             <a>                          
-                                <img src="{{url('public/img/black-logo.webp')}}" alt="logo" width="150" height="50"></a>
+                                <img src="{{url('/img/black-logo.webp')}}" alt="logo" width="150" height="50"></a>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
             <div class="miran-nav" id="mobnav">
                 <div class=" container-fluid ">
                     <nav class="navbar navbar-expand-md navbar-light ">
-                        <a class="navbar-brand " href=""><img src="{{url('public/img/black-logo.webp')}}" alt="logo" width="100 " height="50 "></a>
+                        <a class="navbar-brand " href=""><img src="{{url('/img/black-logo.webp')}}" alt="logo" width="100 " height="50 "></a>
                         <div class="collapse navbar-collapse mean-menu ">
                             <ul class="navbar-nav ">
                                 
@@ -137,7 +137,7 @@
                                 <li class="nav-item "><a href="{{url('psc')}}" class="nav-link ">PSC</a></li>
                                 <li class="nav-item "><a href="{{url('lfp')}}" class=" nav-link ">LFP</a></li>
                                 <li class="nav-item "><a href="{{url('ltm')}}" class=" nav-link ">LTM</a></li>
-                                <!--<li class="nav-item "><a href="{{url('bounceback')}}" class="nav-link ">Bounce Back</a></li>-->
+                                <li class="nav-item "><a href="{{url('bounceback')}}" class="nav-link ">Bounce Back</a></li>
                                 <li class="nav-item "><a href="{{url('contact')}}" class="nav-link ">Contact Us </a></li>                                
                             </ul>
                             <div class="others-option d-flex align-items-center ">

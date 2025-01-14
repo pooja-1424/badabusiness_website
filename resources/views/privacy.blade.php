@@ -1,12 +1,7 @@
 @extends('components/head')
-<link  href="{{asset('/public/css/a74f6e1f5cb94126.css')}}" rel="stylesheet"> 
-<?php
-session_start();
-error_reporting(0);
-$url="https://www.badabusiness-trainings.com/bbmylogin/modules/Webforms/capture.php";
-$enu = base64_encode($url);
+<link  href="{{asset('/css/a74f6e1f5cb94126.css')}}" rel="stylesheet"> 
 
-?>
+
             <div class="others-option-for-responsive ">
                 <div class="container ">
                     <div class="dot-menu ">

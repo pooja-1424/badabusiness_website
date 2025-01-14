@@ -9,11 +9,11 @@
   </span>
   <span class="head text-capitalize"></span>
   <div class="row mb-3">
-    <img src="images/thankyou.webp" class="img-responsive" style="width: -webkit-fill-available; " alt="thanks">
+    <img src="img/thankyou.webp" class="img-responsive" style="width: -webkit-fill-available; " alt="thanks">
   </div>
   <script>
     setTimeout(function() {
-      window.location.href = "index.php";
+      window.location.href = "/home";
     }, 10000);
   </script>
 </section>

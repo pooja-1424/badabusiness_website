@@ -5,7 +5,7 @@
                     <div class="col-lg-4 col-sm-6 col-md-6 ">
                         <div class="single-footer-widget ">
                             <div class="single-footer-widget ">
-                                <a href="# "><img src="{{ url('public/img/black-logo.webp')}} " class="img-fluid " width="150"></a><br>
+                                <a href="# "><img src="{{ url('/img/black-logo.webp')}} " class="img-fluid " width="150"></a><br>
                                 <p class="mt-3"><small> For A Better Learning Experience And Outcome, Every Course Has A Combination Of Graphics, Videos, Animation, Reading Material &amp; Assesments</small></p>
                             </div>
                         </div>
@@ -14,9 +14,9 @@
                         <div class="single-footer-widget listings-details-desc m-0">
                             <h3>Contact Us</h3>
                             <ul class="amenities-list flex-column ">
-                                <li style="max-width: 100%; "><span><i class="fas fa-envelope "></i><a href="mailto:swapnil@badabusiness.com" class="text-decoration-none text-secondary"> swapnil@badabusiness.com</a></span></li>
-                                <li style="max-width: 100%; "><span><i class="fas fa-phone-volume"></i><a href="tel:+91 9167729245" class="text-decoration-none text-secondary">(+91) 9167729245</a></span></li>
-                                <li style="max-width: 100%; "><span><i class="fa fa-map-marker icon "></i>Unit No. 31/B, Kamgaar Nagar, Near Nandikeshwar Temple, Kurla, Mumbai - 400024</span></li>
+                                <li style="max-width: 100%; "><span><i class="fas fa-envelope "></i><a href="mailto:swapnil@badabusiness.com" class="text-decoration-none text-secondary">pooja@gmail.com</a></span></li>
+                                <li style="max-width: 100%; "><span><i class="fas fa-phone-volume"></i><a href="tel:+91 9167729245" class="text-decoration-none text-secondary">(+91) 9370684010</a></span></li>
+                                <li style="max-width: 100%; "><span><i class="fa fa-map-marker icon "></i>Jari marai colony, Tisai Nagar, Kalyan East, Mumbai - 400024</span></li>
                             </ul>  
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             <div class="events-share pb-4">
                                 <div class="share-info ">
                                     <ul class="social-link ">
-                                         <li class="ml-4" style="margin-right:10px ;"><a href="https://www.facebook.com/badabusinesshorizonibc" class="d-block " target="_blank"><i class="fab fa-facebook-f "></i></a></li>
+                                         <li class="ml-4" style="margin-right:10px ;"><a href="" class="d-block " target="_blank"><i class="fab fa-facebook-f "></i></a></li>
                                         <!--<li style="margin-right:10px ;"><a href=" https://www.instagram.com/badabusinesshorizon " class="d-block " target="_blank"><i class='fab fa-instagram'></i></a></li>-->
                                         <li class="ml-4"><a href=" https://www.youtube.com/channel/UCw5lU1NEY8EWS7lXd1B7Mww " class="d-block " target="_blank"><i class="fab fa-youtube-square "></i></a></li>
                                         </ul>
@@ -47,9 +47,9 @@
          </footer>
     </div>
     
-<script src="{{URL::asset('public/js/main.js')}}"></script> 
-<script src="{{URL::asset('public/js/bootstrap.bundle.min.js')}} "></script>
-<script src="{{URL::asset('public/js/fontjs.js')}}"></script> 
+<script src="{{URL::asset('/js/main.js')}}"></script> 
+<script src="{{URL::asset('/js/bootstrap.bundle.min.js')}} "></script>
+<script src="{{URL::asset('/js/fontjs.js')}}"></script> 
 
 </body>
 </html>
@@ -135,7 +135,7 @@
 
             $.ajax({
                 type: "get",
-                url:"{{url('/api')}}",
+                url:"",
                 //headers: {  'Access-Control-Allow-Origin': '*' },
                 data: dataString,
                 success: function() {
@@ -149,7 +149,7 @@
     </script>
 
 
-    <script>
+    <!-- <script>
         document.getElementById("myBtn1").addEventListener("click ", function() {
             var mobile = $("input[name=mobile] ").map(function() {
                 return $(this).val();
@@ -183,4 +183,4 @@
    
      
    
-         
+          -->

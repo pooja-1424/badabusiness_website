@@ -9,7 +9,8 @@
                   <div class="col-lg-5 col-md-4 p-0">         
                     <div class="post-image">
                       <a class="d-block" href="{{ url("/details/$p->id"."/". Str::slug($p->name)) }}" style="height:250px;">
-                        <img src="{{ url('') }}/public/img/{{$p->img}}" class="main-image1" alt="image">
+                       
+                        <img src="{{ asset('img/'.$p->img) }}" class="main-image1" alt="image">
                       </a>
                     </div>
                   </div>       

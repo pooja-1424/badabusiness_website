@@ -10,9 +10,6 @@ class DetailsController extends Controller
     
     public function data($id,$name)
    {
-         include_once(app_path().'/includes/vid.php');
-          include_once(app_path().'/includes/log.php');
-          include_once(app_path().'/includes/browserdetection.php');
         
         
        $details = DB::table('courses')->select('img','name','description','price')

@@ -1,18 +1,11 @@
 @extends('components/head')
-<link  href="{{asset('public/css/a74f6e1f5cb94126.css')}}" rel="stylesheet"> 
+<link  href="{{asset('/css/a74f6e1f5cb94126.css')}}" rel="stylesheet"> 
  <link rel="icon" type="image/x-icon" href="{{url('img/bada-business-favicon.png')}}"> 
-<link href="{{url('public/css/bootstrap.css')}}" rel="stylesheet">
+<link href="{{url('/css/bootstrap.css')}}" rel="stylesheet">
 @include('selectjs')
-
-@php
-session_start();
-error_reporting(0);
-$url="https://www.badabusiness-trainings.com/bbmylogin/modules/Webforms/capture.php";
-$enu = base64_encode($url);
-@endphp
 @csrf
 <section>
-    <img src="{{url('public/img/website_badabusiness_image.webp')}}" class="aa" >
+    <img src="{{url('/img/website_badabusiness_image.webp')}}" class="aa" >
             <div class="container ">
                 <!-- <a href="tel:+919167729245" class="con5">
                 <span><img src="img/call_icon.png" alt="call" style="max-width:20%;">9167729245</span>
@@ -28,7 +21,7 @@ $enu = base64_encode($url);
                 <div class="col-lg-5 col-md-6 p-0">
                   <div class="form-group category-select">                    
                     <select class="banner-form-select" id="s1">
-                      <option value="{{$cList->category_id}}">Select Category </option>
+                      <option >Select Category </option>
                   @foreach(App\Models\Category::all() as $cList)
                     <option class="option" value="{{$cList->category_id}}" >{{$cList->name}}</option>
                   @endforeach
@@ -64,7 +57,9 @@ $enu = base64_encode($url);
         <div class="col-lg-5 col-md-4 p-0">         
           <div class="post-image">
             <a class="d-block" href="{{ url("/details/$p->id"."/". Str::slug($p->name)) }}" style="height:250px;">
-              <img src="{{ url('') }}/public/img/{{$p->img}}" class="main-image1" alt="image">
+             
+              <img src="{{ asset('img/'.$p->img) }}" class="main-image1" alt="image">
+
             </a>
           </div>
         </div>       
@@ -93,8 +88,9 @@ $enu = base64_encode($url);
               <span class="new-price"><i style="font-size:23px" class="fa">&#xf156;</i>&nbsp;{{$p->price}}</span>             
           </div>
           <div class="manage-your-business-content">
-         <!--<a class="default-btn" type="submit" href="{{ url(details, ['name'=>$p->name]) }}">Know More</a>-->
-           <a class="default-btn" type="submit"  href="{{ url("/details/$p->id"."/". Str::slug($p->name)) }}">Know More</a>
+        
+           <a class="default-btn" href="{{ url('details/'.$p->id.'/'.Str::slug($p->name)) }}">Know More</a>
+
         </div>                        
        </div>
      </div>

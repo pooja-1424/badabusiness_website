@@ -1,21 +1,11 @@
 @extends('components/head')
-@php 
-    include_once(app_path().'/includes/backend.php');
-    include(app_path().'/includes/devicedetection.php');
-@endphp
-<link  href="{{asset('/public/css/a74f6e1f5cb94126.css')}}" rel="stylesheet"> 
+
+<link  href="{{asset('/css/a74f6e1f5cb94126.css')}}" rel="stylesheet"> 
 <link rel="icon" type="image/x-icon" href="{{url('img/bada-business-favicon.png')}}"> 
-<meta name="csrf-token" content="{{ csrf_token() }}" />
-@php 
-session_start();
-error_reporting(0);
-$url="https://www.badabusiness-trainings.com/bbmylogin/modules/Webforms/capture.php";
-$enu = base64_encode($url);
-@endphp
-       
+<meta name="csrf-token" content="{{ csrf_token() }}" />      
        
         <section>
-        <img src="{{url('public/img/main-bannerhomepage.webp')}}" class="bb" >
+        <img src="{{url('/img/main-bannerhomepage.webp')}}" class="bb" >
             <div class="container ">
             </div>
         </section>
@@ -25,7 +15,7 @@ $enu = base64_encode($url);
                 <div class="row align-items-center ">
                     <div class="col-lg-6 col-md-6 ">
                         <div class="about-image mb-4">
-                            <img src="{{url('public/img/about_event.webp')}}" width="" height="" alt="image" class="main-image-home" >
+                            <img src="{{url('/img/about_event.webp')}}" width="" height="" alt="image" class="main-image-home" >
                             <!-- <div class="video-btn"><i class="	fas fa-caret-right" style=""></i>
                             </div> -->
                         </div>
@@ -50,56 +40,7 @@ $enu = base64_encode($url);
                     <div class="col-lg-12 col-md-12">
                       <div class="bg-transparent">
                     <form class="formsales" id="_idmyform1" name=" Badabusiness Leads" action="" accept-charset="utf-8" enctype="multipart/form-data">
-                        <input type="hidden" name="__vtrftk" value="sid:f12bb82686cb3636c8609250f819c80adae338ca,1677318409">
-                        <input type="hidden" name="publicid" value="76a79ea12be03378c8ba3c7a92b4389f">                        
-                        <input type="hidden" name="urlencodeenable" value="1">               
-                        <input type="hidden" name="name" value="Bada Business Homepage">     
-                        <input type="hidden" name="cf_881" value="Warm Lead"> 
-                        <input type="hidden" name="cf_971" data-label="" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"> 
-                        <input name="leadsource" data-label="" value="website" type="hidden">
-                        <input name="cf_885" data-label="" value="-" type="hidden"> 
-                        <input name="cf_909" data-label="" value="<?php echo $date; ?>" type="hidden">
-                        <input name="cf_887" data-label="" value="-" type="hidden">
-                        <input name="cf_979" data-label="" value="-" type="hidden"><!--occupation-->
-                        <!--User Details-->
-                        <input name="cf_897" data-label="" value="19.0748" type="hidden"> 
-                        <input name="cf_899" data-label="" value="72.8856" type="hidden"> 
-                        <input name="cf_873" data-label="" value="Maharashtra" type="hidden"> <!-- can assign state-->
-                        <input name="cf_875" data-label="" value="Mumbai" type="hidden">
-                        <input name="cf_893" data-label="" value="India" type="hidden">                       
-                        <input name="cf_891" data-label="" value="Asia/Kolkata" type="hidden">
-                        <input name="cf_895" data-label="" value="103.210.198.13" type="hidden">
-                        <input name="cf_993" data-label="" value="-" type="hidden"><!--dreams-->
-                        <input name="cf_965" data-label="" value="" type="hidden">
-                        @foreach(App\Models\Product::all() as $cList)
-                        <input name="cf_1029" data-label="" value="{{$cList->product_id}}" type="hidden">
-                        @endforeach
-                        <input name="cf_963" data-label="" value="<?php echo $os; ?>" type="hidden">
-                        <!-- End User Details -->
-                        <!-- -**********************--> 
-                        <input name="cf_921" data-label="" value="Admin" type="hidden"><!--Team Leader-->        
-                        <input type="hidden" name="cf_935" data-label="" value="<?php echo $dev; ?>">    
-                        <input type="hidden" name="cf_937" data-label="" value="<?php echo $matchtype; ?>"> 
-                        <input type="hidden" name="cf_1005" data-label="" value="<?php echo $keyw; ?>"><!--keyword-->
-                        <input name="cf_929" data-label="" value="<?php echo $uri; ?>" type="hidden">
-                        <input type="hidden" name="cf_939" data-label="" value="<?php echo $tar; ?>">  
-                        <input type="hidden" name="cf_971" data-label="" value="<?php echo $place; ?>"> 
-                        <input type="hidden" name="cf_949" data-label="" value="<?php echo $create; ?>"> 
-                        <input type="hidden" name="cf_945" data-label="" value="<?php echo $physical; ?>"> 
-                        <input type="hidden" name="cf_965" data-label="" value="<?php echo $adposition; ?>"> 
-                        
-                        <input type="hidden" name="cf_967" data-label="" value="<?php echo $CampaignSource; ?>"> <!-- Ad source-->
-                        <input type="hidden" name="cf_997" data-label="" value=""> <!-- Product Name-->
-                        <input type="hidden" name="cf_903" data-label="" value="https://www.badabusiness-trainings.com/home"><!--url-->
-                        <input type="hidden" name="cf_905"  data-label="" value="<?php echo $src; ?>"><!-- Backend source-->
-                        <input type="hidden" name="cf_961"  data-label="" value="<?php echo $netw; ?>">              
-                        <input name="enu" id="enu" data-label="" value="aHR0cHM6Ly93d3cuYmFkYWJ1c2luZXNzLXRyYWluaW5ncy5jb20vYmJteWxvZ2luL21vZHVsZXMvV2ViZm9ybXMvY2FwdHVyZS5waHA=" type="hidden">
-                        <input name="cf_925" data-label="" value="<?php echo $campaignid; ?>" type="hidden"> <!--Campaign ID-->
-                        <input name="cf_1009" data-label="" value="" type="hidden">   <!--$SubProduct-->
-                        <input name="cf_1007" data-label="" value="<?php echo $campaigntype; ?>" type="hidden">   <!--Campaign Name-->
-                     	<input name="cf_977" data-label="" value="<?php echo $CampaignContent; ?>" type="hidden">   <!--Source-->		
-
-                          
+                                                
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                               <div class="form-group ">
@@ -224,7 +165,7 @@ $enu = base64_encode($url);
                 <div class="row"> 
                     <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
                             <div class="card">
-                                  <img src="{{url('public/img/Mr-Rajesh-Mehta-Chairman.webp')}}"
+                                  <img src="{{url('/img/Mr-Rajesh-Mehta-Chairman.webp')}}"
                                     class="team-member-image" />
                                 <p class="text-blk name">Mr Rajesh Mehta 
                                 </p>
@@ -234,7 +175,7 @@ $enu = base64_encode($url);
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
                          <div class="card ">
-                                  <img src="{{url('public/img/Mr-sanjay-gupta.webp')}}"
+                                  <img src="{{url('/img/Mr-sanjay-gupta.webp')}}"
                                     class="team-member-image" />
                                 <p class="text-blk name">Mr Sanjay Gupta
                                 </p>
@@ -244,7 +185,7 @@ $enu = base64_encode($url);
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
                          <div class="card ">
-                                  <img src="{{url('public/img/Mr-R-G-Agarwal-chairman.webp')}}"
+                                  <img src="{{url('/img/Mr-R-G-Agarwal-chairman.webp')}}"
                                     class="team-member-image" />
                                  <p class="text-blk name">Mr. R. G. Agarwal</p>                                 
                                  <p class="text-blk position">Chairman</p>                               
@@ -252,7 +193,7 @@ $enu = base64_encode($url);
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                          <div class="card">
-                                  <img src="{{url('public/img/Radhey-dixit-bada-business-professor.webp')}}"
+                                  <img src="{{url('/img/Radhey-dixit-bada-business-professor.webp')}}"
                                     class="team-member-image" />
                                 <p class="text-blk name">Radhey Dixit</p>                                
                                 <p class="text-blk position">Professor</p>                                
@@ -274,7 +215,7 @@ $enu = base64_encode($url);
                                 <div class="rating"><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star"></i></div>
                                 <p>One of the best learning business. They are genius and they give best ideas for how to grow your business. Learn and apply.</p>
                                 <div class="client-info">
-                                    <div class="d-flex align-items-center"><img src="{{url('public/img/user.webp')}}" alt="image">
+                                    <div class="d-flex align-items-center"><img src="{{url('/img/user.webp')}}" alt="image">
                                         <div class="title">
                                             <h3>Amit Bhanushali</h3><span>Restaurant Owner</span></div>
                                     </div>
@@ -286,7 +227,7 @@ $enu = base64_encode($url);
                                 <div class="rating"><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i></div>
                                 <p>I attended all seminar of bada buiness in mumbai. I got always a new ideas for my business Dr. Vivek bindra is very kind person.</p>
                                 <div class="client-info">
-                                    <div class="d-flex align-items-center"><img src="{{url('public/img/user.webp')}}" alt="image">
+                                    <div class="d-flex align-items-center"><img src="{{url('/img/user.webp')}}" alt="image">
                                         <div class="title">
                                             <h3>Mukesh Nagraj</h3><span>Shop Owner</span></div>
                                     </div>
@@ -298,7 +239,7 @@ $enu = base64_encode($url);
                                 <div class="rating"><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i></div>
                                 <p>They teach to believe in our own goals which is some marvellous stuff in here which is great. They motivate until we set a definite target.</p>
                                 <div class="client-info">
-                                    <div class="d-flex align-items-center"><img src="{{url('public/img/user.webp')}}" alt="image">
+                                    <div class="d-flex align-items-center"><img src="{{url('/img/user.webp')}}" alt="image">
                                         <div class="title">
                                             <h3>Namita Sharma</h3><span>Shop Owner</span></div>
                                     </div>
@@ -310,7 +251,7 @@ $enu = base64_encode($url);
                                 <div class="rating"><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i></div>
                                 <p>A great place to learn and earn knowledge. At the end it`s up to us the way we pick ourselves in any opportunity. Satisfied</p>
                                 <div class="client-info">
-                                    <div class="d-flex align-items-center"><img src="{{url('public/img/user.webp')}}" alt="image">
+                                    <div class="d-flex align-items-center"><img src="{{url('/img/user.webp')}}" alt="image">
                                         <div class="title">
                                             <h3>Kiran Shetty</h3><span>Educational Class Owner</span></div>
                                     </div>
@@ -322,7 +263,7 @@ $enu = base64_encode($url);
                                 <div class="rating"><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i></div>
                                 <p>I would always recommend Bada Business. My experience with bada business is best as I got a chance to startup my own business.</p>
                                 <div class="client-info">
-                                    <div class="d-flex align-items-center"><img src="{{url('public/img/user.webp')}}" alt="image">
+                                    <div class="d-flex align-items-center"><img src="{{url('/img/user.webp')}}" alt="image">
                                         <div class="title">
                                             <h3>Priyanka Idate</h3><span>Cloths Shop Owner</span></div>
                                     </div>
@@ -334,7 +275,7 @@ $enu = base64_encode($url);
                                 <div class="rating"><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i></div>
                                 <p>Excellent Business Ideas. I am IBC bada business. its a great opportunity to learn and earn with bada business.</p>
                                 <div class="client-info">
-                                    <div class="d-flex align-items-center"><img src="{{url('public/img/user.webp')}}" alt="image">
+                                    <div class="d-flex align-items-center"><img src="{{url('/img/user.webp')}}" alt="image">
                                         <div class="title">
                                             <h3>Shruti Makwana</h3><span>IBC Bada Business</span></div>
                                     </div>
